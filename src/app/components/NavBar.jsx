@@ -21,6 +21,8 @@ const NavBar = () => {
                 <ul className='flex justify-between'>
                     <Link href={'/'}><li>Home</li></Link>
                     <Link href={'/services'}><li>Services</li></Link>
+                    <Link href={'/post'}><li>Post</li></Link>
+                    <Link href={'/meals'}><li>Meals</li></Link>
                     <p>
                         <Link href={'/about'}><li>Project</li></Link>
                         <Link
