@@ -6,6 +6,11 @@ export const GetAllPost = async () => {
     return data
 }
 
+export const metadata = {
+    title: "All Post",
+    description: "Loading Json Data From MealsDB API",
+};
+
 const PostPages = async () => {
     const appPost = await GetAllPost()
     console.log('appPost', appPost);

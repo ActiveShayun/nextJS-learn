@@ -1,5 +1,13 @@
-import SearchInputParams from "./components/searchInputParams";
 
+import Image from "next/image";
+import SearchInputParams from "./components/searchInputParams";
+export const metadata = {
+    title: {
+        default: 'All Meals',
+        template: '%s | Learning NextJS'
+    },
+    description: "All meals here",
+};
 
 const MealsPages = async ({ searchParams }) => {
     const query = await searchParams;
@@ -27,7 +35,12 @@ const MealsPages = async ({ searchParams }) => {
                 {
                     meals?.map(singleMeals => {
                         return (
-                            <div >
+                            <div key={singleMeals.idMeal}>
+                                <Image
+                                    src={singleMeals.strMealThumb}
+                                    alt={singleMeals.strCategory}
+                                    width={600}
+                                    height={600} />
                                 <h2 className='text-2xl'>
                                     {singleMeals.strCategory}
                                 </h2>
